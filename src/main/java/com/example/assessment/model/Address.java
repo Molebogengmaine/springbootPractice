@@ -1,4 +1,4 @@
-package com.example.assessment.controller;
+package com.example.assessment.model;
 
 import jakarta.persistence.*;
 
@@ -30,6 +30,11 @@ public class Address {
     private String cityOrTown;
     private String postalCode;
     private String country;
+    @OneToOne(fetch = FetchType.LAZY,
+            cascade =  CascadeType.ALL,
+            mappedBy = "address")
+
+    private AddressDetails addressDetails;
 
     public Address() {
     }

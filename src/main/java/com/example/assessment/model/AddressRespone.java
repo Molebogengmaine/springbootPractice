@@ -1,4 +1,4 @@
-package com.example.assessment.controller;
+package com.example.assessment.model;
 
 public class AddressRespone {
 
